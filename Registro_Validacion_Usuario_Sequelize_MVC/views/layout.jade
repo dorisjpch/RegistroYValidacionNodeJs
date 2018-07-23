@@ -1,0 +1,33 @@
+doctype html
+html(lang="es")
+  head
+    meta(charset="utf-8")
+    meta(name="viewport", content= "width=device-width, user-scalable=no, initial-scale=1, maximun-scale=1, minimum-scale=1")
+    link(rel= "stylesheet", href="/css/bootstrap.css")
+    link(rel= "stylesheet", href="/css/style.css")
+  body
+    div(class='container')
+      div(class='header.clearfix')
+        nav
+          ul(class='nav nav-pills pull-right')
+            if user
+              li: a(href='/') Sistema
+              li: a(href='/logout') Salir
+            else
+              li: a(href='/login') Login
+              li: a(href='/register') Registro
+        h3(class='text-muted')= 'Registro y autenticación'
+      div(class='row')
+        div(class='col-lg-12')
+          block content
+          if(success_msg.length > 0)
+            div(class= 'alert alert-success') 
+              p <strong>#{success_msg}!
+          else if(error_msg.length > 0)
+            div(class= 'alert alert-danger')
+              p  #{error_msg}
+          else if(error.length > 0)
+            div(class= 'alert alert-danger')
+              p  #{error}                                   
+      footerdiv(class= 'footer_header')
+        p &copy; 2018 Registro y autenticaci&oacute;n, Inc.

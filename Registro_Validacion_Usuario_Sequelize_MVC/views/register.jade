@@ -1,0 +1,26 @@
+extends layout.jade
+block content
+  h2(class= 'page-header')= 'Crea tu usuario'
+  form(method="POST", action="/register", autocomplete='off')
+    div(class='form-group')
+      label(for='name') Nombre usuario:
+      input(type="text",name="name", id='name',placeholder="Nombre del usuario", class='form-control')
+    div(class='form-group')
+      label(for='userName') Nombre Completo: 
+      input.form-control(type="text",  id='userName',name= 'userName', placeholder='Nombre completo', class='form-control')
+    div(class='form-group')
+      label(for='userEmail') Correo Electrónico:
+      input.form-control(type="email", id='userEmail', name="userEmail", placeholder="name@email.com", class='form-control')
+    div(class='form-group')
+      label(for='password') Contraseña:
+      input.form-control(type="password", id='password', name="password", placeholder="Contraseña", class='form-control')
+    div(class='form-group')
+      label(for='password2') Confirme contraseña:
+      input.form-control(type="password", id='password2', name="password2", placeholder="Reingrese su contraseña", class='form-control')
+    div(class='form-group')    
+      input(type="submit", value="Enviar", class='btn btn-default')  
+  if errors
+    ul
+      for error in errors
+        div(class='alert alert-danger')
+          li!= error.msg 

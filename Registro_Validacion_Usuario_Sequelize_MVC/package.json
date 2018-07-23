@@ -1,0 +1,34 @@
+{
+  "name": "Api-MVC-Sequelize",
+  "version": "0.0.1",
+  "description": "Api MVC con Sequelize, Node y Express de Registro y validacion de Uruarios",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "keywords": [
+    "API",
+    "Sequelize",
+    "MVC"
+  ],
+  "author": "@dorisjpch",
+  "license": "MIT",
+  "dependencies": {
+    "bcryptjs": "*",
+    "body-parser": "*",
+    "connect-flash": "*",
+    "cookie-parser": "*",
+    "express": "*",
+    "express-session": "*",
+    "express-validator": "*",
+    "jade": "*",
+    "morgan": "*",
+    "mysql": "*",
+    "mysql2": "^1.5.3",
+    "passport": "*",
+    "passport-local": "*",
+    "sequelize": "^4.37.8",
+    "serve-favicon": "*"
+  }
+}

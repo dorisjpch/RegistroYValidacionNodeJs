@@ -1,0 +1,13 @@
+extends layout.jade
+block content
+  body
+    h2(class='page-header')= 'Inicia Sesión'
+    form(method='POST', action='/login', autocomplete='off')
+      div(class='form-group')
+        label(for='userEmail')= 'Correo Electrónico'
+        input(type="email", name="userEmail", id= 'userEmail', placeholder="name@email.com",  class='form-control')
+      div(class='form-group')
+        label(for='password')= 'Contraseña'
+        input(type="password", name="password", id='password', placeholder="Contraseña", class= 'form-control')   
+      div(class='form-group')  
+        input(type="submit", value="Iniciar Sesión", class='btn btn-default') 
